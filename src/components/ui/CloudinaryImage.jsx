@@ -10,6 +10,7 @@ import { auto } from '@cloudinary/url-gen/qualifiers/quality';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
  
 const rawCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+// Use the environment Cloudinary cloud name, fallback to default if not set.
 const cloudName = rawCloudName
   ? String(rawCloudName).trim().replace(/^['"]|['"]$/g, '')
   : 'rvstudioin';

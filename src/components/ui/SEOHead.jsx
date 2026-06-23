@@ -4,6 +4,7 @@
 // ═══════════════════════════════════════════════════════════
  
 // src/components/ui/SEOHead.jsx
+// Component to render page metadata and social preview tags via react-helmet-async.
 import { Helmet } from 'react-helmet-async';
  
 export function SEOHead({

@@ -17,12 +17,15 @@ const SLIDES = [
 ];
  
 export function HeroSlider() {
+  // current slide index and pause state for hover interaction
   const [current, setCurrent] = useState(0);
   const [paused, setPaused]   = useState(false);
  
+  // move to the next slide in a loop
   const next = useCallback(() => setCurrent(c => (c + 1) % SLIDES.length), []);
  
   useEffect(() => {
+    // Auto-advance slides every 5 seconds unless the slider is paused
     if (paused) return;
     const t = setInterval(next, 5000);
     return () => clearInterval(t);

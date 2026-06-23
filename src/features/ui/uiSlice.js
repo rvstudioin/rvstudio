@@ -8,6 +8,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const uiSlice = createSlice({
   name: 'ui',
   initialState: {
+    // UI state shared across the app: lightbox, navbar scroll state, mobile menu open state
     lightbox:     { open: false, imageUrl: null, title: null },
     navScrolled:  false,
     mobileMenuOpen: false,

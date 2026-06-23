@@ -17,17 +17,20 @@ const NAV_LINKS = [
 ];
  
 export default function Navbar() {
+  // Responsive navigation bar with desktop links and mobile slide-in menu
   const dispatch  = useDispatch();
   const { navScrolled: scrolled, mobileMenuOpen } = useSelector(s => s.ui);
   const location  = useLocation();
  
   useEffect(() => {
+    // Track window scroll position to apply a compact navbar style after scrolling
     const handler = () => dispatch(setNavScrolled(window.scrollY > 60));
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, [dispatch]);
 
   useEffect(() => {
+    // Prevent page scrolling when the mobile menu is open
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -39,6 +42,7 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   useEffect(() => {
+    // Auto-close the mobile menu whenever the route changes
     if (mobileMenuOpen) {
       dispatch(toggleMobileMenu());
     }

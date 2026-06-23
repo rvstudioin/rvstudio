@@ -19,6 +19,7 @@ import AboutUs from './pages/AboutUs';
 // import './styles/globals.css';
  
 export default function App() {
+  // Application root sets up SEO, Redux store, and client-side routing
   return (
     <HelmetProvider>
       <Provider store={store}>

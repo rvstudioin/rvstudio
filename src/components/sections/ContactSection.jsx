@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// src/components/sections/ContactSection.jsx
+// Contact section with a form, validation, mailto integration, and success message.
 export function ContactSection() {
   //  const WHATSAPP_NUMBER = "919904795771"; // E.164 format without '+'
   const RECIPIENT_EMAIL = "rvstudioin@gmail.com";
@@ -11,6 +13,7 @@ export function ContactSection() {
     eventDate: "",
     projectDetails: "",
   });
+  // Form state fields and validation state for the contact form.
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -18,12 +21,14 @@ export function ContactSection() {
  
   function handleChange(e) {
     const { name, value } = e.target;
+    // Update field value and clear any existing error for that field
     setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
   }
 
     function validate() {
     const newErrors = {};
+    // Basic field validation: required fields and simple email pattern
     if (!formData.name.trim()) newErrors.name = "Full name is required.";
     if (!formData.email.trim()) newErrors.email = "Email address is required.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
@@ -34,6 +39,7 @@ export function ContactSection() {
   }
  
   function buildMailtoLink() {
+    // Build a mailto URL that pre-populates the user's email client with form values
     const subject = encodeURIComponent(`New Enquiry – ${formData.service} | RV Studio`);
     const body = encodeURIComponent(
       [
@@ -71,6 +77,7 @@ export function ContactSection() {
   function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
+    // Validate form before submission and open mailto draft if valid
 
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {

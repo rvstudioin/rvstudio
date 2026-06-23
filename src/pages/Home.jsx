@@ -8,6 +8,7 @@ import { ServicesSection } from '../components/sections/ServicesSection';
 import { ContactSection } from '../components/sections/ContactSection';
  
 export default function Home() {
+  // Home page composes several landing sections and sets SEO metadata
   return (
     <>
       <SEOHead

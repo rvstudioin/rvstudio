@@ -1,5 +1,7 @@
 import { CloudinaryImage } from "../ui/CloudinaryImage";
 
+// src/components/sections/AboutSection.jsx
+// About section with company story, image, stats, and call-to-action link.
 export function AboutSection() {
   return (
     <section className="about">

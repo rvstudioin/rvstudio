@@ -14,6 +14,7 @@ const Portfolio = () => {
   );
 
   const filteredCollections = useMemo(() => {
+    // Only re-filter collections when activeCategory changes
     return activeCategory === 'all'
       ? portfolioData.collections
       : portfolioData.collections.filter(collection => collection.category === activeCategory);

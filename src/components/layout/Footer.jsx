@@ -1,3 +1,5 @@
+// src/components/layout/Footer.jsx
+// Footer component with navigation links and social contacts.
 export function Footer() {
   return (
     <footer>

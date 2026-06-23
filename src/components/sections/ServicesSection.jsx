@@ -7,6 +7,8 @@ const services = [
   { id: 'nature', title: 'Nature & Travel', description: 'Landscape, wildlife, and documentary photography with cinematic framing.' },
 ];
 
+// src/components/sections/ServicesSection.jsx
+// Services section that renders the studio's service offerings as cards.
 export function ServicesSection() {
   return (
     <section className="services">

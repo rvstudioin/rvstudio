@@ -34,6 +34,8 @@ const works = [
   },
 ];
 
+// src/components/sections/RecentWorks.jsx
+// Section that displays a selection of recent works with image cards.
 export function RecentWorks() {
   return (
     <section className="recent-works py-24">

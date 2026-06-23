@@ -3,18 +3,22 @@ import { useParams, useNavigate } from 'react-router-dom';
 import portfolioData from '../data/portfolio.json';
 
 const categoryLabels = { all: 'All Work', ...portfolioData.categoryLabels };
+// Category labels used across the portfolio listing and collection pages.
 
+// Utility helpers used by the portfolio image viewer
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
 function getTouchDistance(touches) {
+  // Calculate pinch gesture distance for two-finger zoom
   const dx = touches[0].clientX - touches[1].clientX;
   const dy = touches[0].clientY - touches[1].clientY;
   return Math.hypot(dx, dy);
 }
 
 function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
+  // Image viewer handles zoom, pan, touch gestures, and image navigation
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
@@ -24,6 +28,7 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   const containerRef = useRef(null);
 
   const handleWheel = event => {
+    // Wheel zoom control for desktop users
     event.preventDefault();
     setZoom(prev => {
       const next = clamp(prev + (event.deltaY < 0 ? 0.05 : -0.05), 1, 3);
@@ -33,6 +38,7 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   };
 
   useEffect(() => {
+    // Attach wheel event to viewer container to support zoom interactions
     const container = containerRef.current;
     if (!container) return;
 
@@ -43,6 +49,7 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   }, [zoom]);
 
   const handleTouchStart = event => {
+    // Begin pinch-to-zoom tracking on mobile touch gestures
     if (event.touches.length === 2) {
       touchDistanceRef.current = getTouchDistance(event.touches);
     }
@@ -75,6 +82,7 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   };
 
   const handlePointerDown = event => {
+    // Start panning only when zoom is active
     if (zoom <= 1) return;
     pointerRef.current = {
       active: true,
@@ -113,6 +121,7 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   };
 
   const handleImageLoad = event => {
+    // Maintain the viewer container height to preserve aspect ratio on load
     if (containerRef.current) {
       const img = event.target;
       const naturalWidth = img.naturalWidth;
@@ -205,16 +214,20 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   );
 }
 
+// src/pages/PortfolioCollection.jsx
+// Collection detail page with image viewer, thumbnails, and back navigation.
 export default function PortfolioCollection() {
   const { collectionId } = useParams();
   const navigate = useNavigate();
   const collection = useMemo(
+    // Find the selected collection based on route param
     () => portfolioData.collections.find(item => item.id === collectionId),
     [collectionId]
   );
   const [activeIndex, setActiveIndex] = useState(0);
 
   if (!collection) {
+    // Show fallback UI when the route param does not match any collection
     return (
       <section className="portfolio py-24 bg-obsidian-soft min-h-screen">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 text-center">
@@ -239,6 +252,7 @@ export default function PortfolioCollection() {
   const activeImage = collection.images[activeIndex];
 
   const goPrevious = () => {
+    // Navigate to previous image while staying within bounds
     setActiveIndex(prev => (prev > 0 ? prev - 1 : prev));
   };
 
