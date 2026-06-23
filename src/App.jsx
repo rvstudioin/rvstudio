@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 import { store } from './redux/store';
-import Navbar   from './components/layout/Navbar';
+import Navbar   from './components/layout/NavBar';
 import { Footer }  from './components/layout/Footer';
 import { WhatsAppButton } from './components/ui/WhatsAppButton';
 // import { Lightbox } from './components/ui/Lightbox';
