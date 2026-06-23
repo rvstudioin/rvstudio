@@ -42,7 +42,7 @@ export default function Navbar() {
     if (mobileMenuOpen) {
       dispatch(toggleMobileMenu());
     }
-  }, [location.pathname, mobileMenuOpen, dispatch]);
+  }, [location.pathname, dispatch]);
  
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between
@@ -54,7 +54,7 @@ export default function Navbar() {
         RV <span >Studio</span>
       </Link>
  
-      <ul className="hidden md:flex gap-10 list-none">
+      <ul className="hidden lg:flex gap-10 list-none">
         {NAV_LINKS.map(({ label, path }) => (
           <li key={path}>
             <Link
@@ -70,14 +70,14 @@ export default function Navbar() {
  
       <Link
         to="/contact"
-        className="hidden md:block text-label uppercase tracking-widest text-gold
+        className="hidden lg:block text-label uppercase tracking-widest text-gold
           border border-gold-dim px-5 py-2 hover:bg-gold hover:text-obsidian transition-all duration-200"
       >
         Book a Session
       </Link>
  
       <button
-        className="md:hidden text-cream"
+        className="lg:hidden text-cream"
         onClick={() => dispatch(toggleMobileMenu())}
         aria-label="Toggle menu"
       >
@@ -85,16 +85,14 @@ export default function Navbar() {
       </button>
  
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 pointer-events-none
-          ${mobileMenuOpen ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0'}`}
+        className={`fixed inset-0 z-[100] lg:hidden transition-opacity duration-300 ${mobileMenuOpen ? 'pointer-events-auto visible opacity-100' : 'pointer-events-none invisible opacity-0'}`}
         aria-hidden={!mobileMenuOpen}
       >
         <div
-          className="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-pointer"
+          className="absolute inset-0 bg-black/70 cursor-pointer"
           onClick={() => dispatch(toggleMobileMenu())}
         />
-        <div className={`absolute right-0 top-0 h-full w-full max-w-sm bg-obsidian/98 backdrop-blur-md p-6 flex flex-col gap-8 transition-transform duration-300 shadow-lg border-l border-gold/10
-          ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`absolute right-0 top-0 h-screen w-[18rem] max-w-sm bg-black p-6 flex flex-col gap-8 transition-transform duration-300 shadow-lg z-50 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <button
             className="self-end text-4xl text-cream hover:text-gold transition-colors duration-200"
             onClick={() => dispatch(toggleMobileMenu())}
@@ -109,7 +107,6 @@ export default function Navbar() {
                   to={path}
                   className={`text-xl uppercase tracking-[0.25em] transition-colors duration-200 block
                     ${location.pathname === path ? 'text-gold' : 'text-gray-light hover:text-gold'}`}
-                  onClick={() => dispatch(toggleMobileMenu())}
                 >
                   {label}
                 </Link>
