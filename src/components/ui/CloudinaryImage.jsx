@@ -9,7 +9,11 @@ import { fill, scale } from '@cloudinary/url-gen/actions/resize';
 import { auto } from '@cloudinary/url-gen/qualifiers/quality';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
  
-const cld = new Cloudinary({ cloud: { cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME } });
+const rawCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const cloudName = rawCloudName
+  ? String(rawCloudName).trim().replace(/^['"]|['"]$/g, '')
+  : 'rvstudioin';
+const cld = new Cloudinary({ cloud: { cloudName } });
  
 /**
  * CloudinaryImage
