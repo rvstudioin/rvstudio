@@ -14,12 +14,7 @@ export function AboutSection() {
         </div>
         <div className="max-w-6xl mx-auto px-6 sm:px-10">
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.1fr 0.9fr",
-              gap: "4rem",
-              alignItems: "center",
-            }}
+            className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-16 items-center"
           >
             <div className="about-image">
               <div className="about-image-fill" >

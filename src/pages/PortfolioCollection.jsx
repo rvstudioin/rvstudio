@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import portfolioData from '../data/portfolio.json';
 
@@ -18,8 +18,10 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
+  const [containerHeight, setContainerHeight] = useState('auto');
   const touchDistanceRef = useRef(null);
   const pointerRef = useRef({ active: false, startX: 0, startY: 0, originX: 0, originY: 0 });
+  const containerRef = useRef(null);
 
   const handleWheel = event => {
     event.preventDefault();
@@ -29,6 +31,16 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
       return next;
     });
   };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+    };
+  }, [zoom]);
 
   const handleTouchStart = event => {
     if (event.touches.length === 2) {
@@ -100,6 +112,25 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
     }
   };
 
+  const handleImageLoad = event => {
+    if (containerRef.current) {
+      const img = event.target;
+      const naturalWidth = img.naturalWidth;
+      const naturalHeight = img.naturalHeight;
+      const containerWidth = containerRef.current.offsetWidth;
+      
+      // Calculate height based on image aspect ratio
+      if (naturalWidth && naturalHeight && containerWidth) {
+        const aspectRatio = naturalHeight / naturalWidth;
+        const calculatedHeight = Math.min(
+          containerWidth * aspectRatio,
+          window.innerHeight - 220
+        );
+        setContainerHeight(`${calculatedHeight}px`);
+      }
+    }
+  };
+
   return (
     <div>
         <div className="viewer-top-panel rounded-[2rem] border border-gold/10 bg-obsidian-dark p-4 shadow-[0_18px_60px_-40px_rgba(0,0,0,0.55)]">
@@ -132,8 +163,9 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
           </div>
     <div className="viewer-main rounded-[2rem] overflow-hidden bg-obsidian-dark border border-gold/10">
       <div
+        ref={containerRef}
         className={`relative bg-black overflow-hidden ${dragging ? 'dragging' : ''}`}
-        onWheel={handleWheel}
+        style={{ height: containerHeight }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -148,7 +180,8 @@ function Viewer({ image, activeIndex, totalImages, goPrevious, goNext }) {
           alt="Active portfolio image"
           className="viewer-image"
           loading="lazy"
-        onContextMenu={(e) => e.preventDefault()}
+          onLoad={handleImageLoad}
+          onContextMenu={(e) => e.preventDefault()}
           style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})` }}
         />
         <div className="viewer-index">

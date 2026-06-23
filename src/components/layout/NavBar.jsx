@@ -85,39 +85,46 @@ export default function Navbar() {
       </button>
  
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300
-          ${mobileMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}
+        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 pointer-events-none
+          ${mobileMenuOpen ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0'}`}
         aria-hidden={!mobileMenuOpen}
       >
         <div
-          className="absolute inset-0 bg-obsidian/95 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-pointer"
           onClick={() => dispatch(toggleMobileMenu())}
         />
-        <div className="relative h-full bg-obsidian/95 p-6 flex flex-col gap-8">
+        <div className={`absolute right-0 top-0 h-full w-full max-w-sm bg-obsidian/98 backdrop-blur-md p-6 flex flex-col gap-8 transition-transform duration-300 shadow-lg border-l border-gold/10
+          ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <button
-            className="self-end text-3xl text-cream"
+            className="self-end text-4xl text-cream hover:text-gold transition-colors duration-200"
             onClick={() => dispatch(toggleMobileMenu())}
             aria-label="Close menu"
           >
-            ×
+            ✕
           </button>
-          <div className="flex flex-col gap-6 pt-8">
+          <ul className="flex flex-col gap-6 pt-4 list-none">
             {NAV_LINKS.map(({ label, path }) => (
-              <Link
-                key={path}
-                to={path}
-                className={`text-2xl uppercase tracking-[0.3em] transition-colors duration-200
-                  ${location.pathname === path ? 'text-gold' : 'text-gray-light hover:text-gold'}`}
-              >
-                {label}
-              </Link>
+              <li key={path}>
+                <Link
+                  to={path}
+                  className={`text-xl uppercase tracking-[0.25em] transition-colors duration-200 block
+                    ${location.pathname === path ? 'text-gold' : 'text-gray-light hover:text-gold'}`}
+                  onClick={() => dispatch(toggleMobileMenu())}
+                >
+                  {label}
+                </Link>
+              </li>
             ))}
+          </ul>
+          <div className="border-t border-gold/10 pt-6">
+            <Link
+              to="/contact"
+              className="block text-center py-3 px-4 uppercase tracking-[0.25em] font-semibold text-obsidian bg-gold hover:bg-gold/90 transition-colors duration-200 rounded"
+              onClick={() => dispatch(toggleMobileMenu())}
+            >
+              Book a Session
+            </Link>
           </div>
-          <Link
-            to="/contact"
-            className="nav-cta">
-            Book a Session
-          </Link>
         </div>
       </div>
     </nav>
