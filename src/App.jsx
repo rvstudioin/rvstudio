@@ -22,7 +22,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename="/rvstudio">
           <Navbar />
           <main>
             <Routes>
