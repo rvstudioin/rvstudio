@@ -1,0 +1,125 @@
+
+// ═══════════════════════════════════════════════════════════
+// 7. NAVBAR COMPONENT
+// ═══════════════════════════════════════════════════════════
+ 
+// src/components/layout/Navbar.jsx
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setNavScrolled, toggleMobileMenu } from '../../features/ui/uiSlice';
+ 
+const NAV_LINKS = [
+  { label: 'Home',      path: '/' },
+  { label: 'Portfolio', path: '/portfolio' },
+  { label: 'About',     path: '/about' },
+  { label: 'Contact',   path: '/contact' },
+];
+ 
+export default function Navbar() {
+  const dispatch  = useDispatch();
+  const { navScrolled: scrolled, mobileMenuOpen } = useSelector(s => s.ui);
+  const location  = useLocation();
+ 
+  useEffect(() => {
+    const handler = () => dispatch(setNavScrolled(window.scrollY > 60));
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      dispatch(toggleMobileMenu());
+    }
+  }, [location.pathname, mobileMenuOpen, dispatch]);
+ 
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between
+      transition-all duration-300 border-b border-gold-dim/10
+      ${scrolled ? 'py-4 bg-obsidian/95 backdrop-blur-md' : 'py-6 bg-obsidian/80 backdrop-blur-sm'}
+      px-12`}
+    >
+      <Link to="/" className="nav-logo">
+        RV <span >Studio</span>
+      </Link>
+ 
+      <ul className="hidden md:flex gap-10 list-none">
+        {NAV_LINKS.map(({ label, path }) => (
+          <li key={path}>
+            <Link
+              to={path}
+              className={` uppercase tracking-[0.3em] transition-colors duration-200
+                ${location.pathname === path ? 'text-gold' : 'text-gray-light hover:text-gold'}`}
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+ 
+      <Link
+        to="/contact"
+        className="hidden md:block text-label uppercase tracking-widest text-gold
+          border border-gold-dim px-5 py-2 hover:bg-gold hover:text-obsidian transition-all duration-200"
+      >
+        Book a Session
+      </Link>
+ 
+      <button
+        className="md:hidden text-cream"
+        onClick={() => dispatch(toggleMobileMenu())}
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
+ 
+      <div
+        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300
+          ${mobileMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}
+        aria-hidden={!mobileMenuOpen}
+      >
+        <div
+          className="absolute inset-0 bg-obsidian/95 backdrop-blur-sm"
+          onClick={() => dispatch(toggleMobileMenu())}
+        />
+        <div className="relative h-full bg-obsidian/95 p-6 flex flex-col gap-8">
+          <button
+            className="self-end text-3xl text-cream"
+            onClick={() => dispatch(toggleMobileMenu())}
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+          <div className="flex flex-col gap-6 pt-8">
+            {NAV_LINKS.map(({ label, path }) => (
+              <Link
+                key={path}
+                to={path}
+                className={`text-2xl uppercase tracking-[0.3em] transition-colors duration-200
+                  ${location.pathname === path ? 'text-gold' : 'text-gray-light hover:text-gold'}`}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+          <Link
+            to="/contact"
+            className="nav-cta">
+            Book a Session
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}

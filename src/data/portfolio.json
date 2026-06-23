@@ -1,0 +1,182 @@
+{
+  "categoryLabels": {
+    "preWedding": "Pre-Wedding",
+    "product": "Product",
+    "nature": "Nature",
+    "place": "Place",
+    "event": "Event",
+    "wildlife": "Wildlife",
+    "street": "Street",
+    "candid": "Candid",
+    "wedding": "Wedding"
+  },
+  "collections": [
+    {
+      "id": "bindu-manoj",
+      "title": "Bindu & Manoj",
+      "category": "preWedding",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/mojkckmr2irxai08fyg1.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/j8jya38whyqxny02teds.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/htsyysxyhwuzivxa4xkq.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/gyqpfjxes1mzcnbig93k.webp"
+      ]
+    },
+    {
+      "id": "hetal-jaymin",
+      "title": "Hetal & Jaymin",
+      "category": "preWedding",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/sgn0hv2az6jnrri88uh0.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/aetmkzd1tghg8ymvvu61.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/wfulbdy3ar3rfj6mcpfw.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/c435z4rdqutnsqam3lec.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/t7rjobk8lxraclx6rok1.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/jofbhkbti74csexvwoel.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/z7jjhuivmnnmtzbmatb1.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/z7sdf0occpokcweq013m.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/bnph2a63n9fgydqwyvwh.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/qrk9fu4cewvzld5eeajk.webp"
+      ]
+    },
+    {
+      "id": "jahnvi-pratik",
+      "title": "Jahnvi & Pratik",
+      "category": "preWedding",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Pratik/dlxov9bii8rxsiuwxgfc.webp"
+      ]
+    },
+    {
+      "id": "product",
+      "title": "Product Photography",
+      "category": "product",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/enbjtgq5xxqbgrdjwnsx.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/qmlnfr9vukkzbsqins64.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/hy3tiw4rvlrpenofghms.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/emfbz49x5hqvbajxuaob.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/yuqqwi6kz961pvpkm8hl.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/n8uvhx2erxlwvh9nda65.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/m37gcryhg8lxgbntwew9.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/dslkl3gnhooyqbeozrsw.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/c9hv9ls0k3yvkdtppczm.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/hzek1q0hcjfg3vewivfx.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/bmtwbvw4uizlejhtokba.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/iqtwxecpex8qijrhdsfa.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/bnwyzhry3xoszdbfdnnn.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Product/jtbyuqd92zpvhucv6y7z.webp"
+      ]
+    },
+    {
+      "id": "nature",
+      "title": "Nature Photography",
+      "category": "nature",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/fco7jinxg2kvks6l6eeq.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/mmrkovs2sqrzqdtjicg0.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/hzwj9mixmi6ebbiwagvz.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/yrxq2ew3cwpcik5fg3dg.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/bhfln2whmfrl5ysddp09.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/uksq1go58otolubfpshu.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/rid78ksbkx0lloecagvr.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/umijahg0lwnzv5kwja18.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/e28qwcrcdpddn0err07a.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/irkbfzng6eagdggpi71t.webp"
+      ]
+    },
+    {
+      "id": "places",
+      "title": "Places Photography",
+      "category": "place",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/yr4p0rnvm6nmpkxd5ifw.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/gixrkptpvzy6xs8by0dd.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/xlnbhruqqs67lfm8ompo.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/z7jxe2ytcp9kso3oeo1x.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/qpect9c67b54oug0dy0x.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/qi0ssyly1xesgz4bqjin.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/tchzvhnmogtokqznc6rj.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/p2fqduyl3bwvspfdasrq.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/fcjcn7kpcrhyksmjwwcb.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/jtcnuscf9wphmsxkgxvt.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/djuaulgp9biwtj25rw3a.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Place/gcpop4boggnpqcoqsx0j.webp"
+      ]
+    },
+    {
+      "id": "event",
+      "title": "Event Photography",
+      "category": "event",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Event/ccgk63ux7bgcgsf93mxq.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Event/q9oivm43r2fajsqpxg2a.webp"
+      ]
+    },
+    {
+      "id": "wildlife",
+      "title": "Wildlife & Nature",
+      "category": "wildlife",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/yfnkscfgdngxpx4atcl7.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Wildlife/katqgofmhmfoxveptkc8.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Wildlife/f7ysi4nsabvhhyddyeqs.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Wildlife/fgggnru6q6vq6dnfhkyx.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Wildlife/u5fjqk4zel3jb46qfeyp.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/weqq4psbyaqrtpkocv7r.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/zyjoic11v5ljhqufu61q.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Wildlife/wgho3muexm1umkfcuslq.webp"
+      ]
+    },
+    {
+      "id": "street",
+      "title": "Street Photography",
+      "category": "street",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Nature/ltmctjfbw7k6chresse7.webp"
+      ]
+    },
+    {
+      "id": "pre-wedding-featured",
+      "title": "Pre-Wedding Collection",
+      "category": "preWedding",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/sgn0hv2az6jnrri88uh0.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/aetmkzd1tghg8ymvvu61.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/wfulbdy3ar3rfj6mcpfw.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/c435z4rdqutnsqam3lec.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/t7rjobk8lxraclx6rok1.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/jofbhkbti74csexvwoel.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/z7jjhuivmnnmtzbmatb1.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/z7sdf0occpokcweq013m.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/bnph2a63n9fgydqwyvwh.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj-sadhu/qrk9fu4cewvzld5eeajk.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Pratik/dlxov9bii8rxsiuwxgfc.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/mojkckmr2irxai08fyg1.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/j8jya38whyqxny02teds.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/htsyysxyhwuzivxa4xkq.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Preweddings/Manoj/gyqpfjxes1mzcnbig93k.webp"
+      ]
+    },
+    {
+      "id": "wedding",
+      "title": "Wedding Photography",
+      "category": "wedding",
+      "images": []
+    },
+    {
+      "id": "candid",
+      "title": "Candid Portraits",
+      "category": "candid",
+      "images": [
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/gufkxb0orsb2iymmxiys.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/m49tg9kkljfg28tnzcl5.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/hqckvpryk6t6qgxecqng.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/gfsctkyrxzsvrfouyisq.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/y5dszpbjjb73y58r493j.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/dchwxru9yrxyynednhgi.webp",
+        "https://res.cloudinary.com/rvstudioin/image/upload/f_auto,q_auto/v1/Portrait/lmoqw6p8vh0nqgmhauch.webp"
+      ]
+    }
+  ]
+}
