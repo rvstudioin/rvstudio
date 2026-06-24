@@ -1,5 +1,7 @@
 import { useMemo, useRef, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { SEOHead } from '../components/ui/SEOHead';
+import { generateBreadcrumbs } from '../utils/seoHelpers';
 import portfolioData from '../data/portfolio.json';
 
 const categoryLabels = { all: 'All Work', ...portfolioData.categoryLabels };
@@ -229,27 +231,37 @@ export default function PortfolioCollection() {
   if (!collection) {
     // Show fallback UI when the route param does not match any collection
     return (
-      <section className="portfolio py-24 bg-obsidian-soft min-h-screen">
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 text-center">
-          <div className="section-eyebrow">Collection not found</div>
-          <h1 className="section-title">This portfolio collection does not exist.</h1>
-          <p className="mt-6 text-gray-light">Please go back and choose another category.</p>
-          <div className="mt-10">
-            <button
-              type="button"
-              className="btn-primary"
-              onClick={() => navigate('/portfolio')}
-            >
-              Back to Portfolio
-            </button>
+      <>
+        <SEOHead
+          title="Collection Not Found"
+          description="The portfolio collection you're looking for could not be found. Browse our complete portfolio for all our work."
+          url="/portfolio"
+        />
+        <section className="portfolio py-24 bg-obsidian-soft min-h-screen">
+          <div className="max-w-6xl mx-auto px-6 sm:px-10 text-center">
+            <div className="section-eyebrow">Collection not found</div>
+            <h1 className="section-title">This portfolio collection does not exist.</h1>
+            <p className="mt-6 text-gray-light">Please go back and choose another category.</p>
+            <div className="mt-10">
+              <button
+                type="button"
+                className="btn-primary"
+                onClick={() => navigate('/portfolio')}
+              >
+                Back to Portfolio
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </>
     );
   }
 
   const totalImages = collection.images.length;
   const activeImage = collection.images[activeIndex];
+  const breadcrumbs = generateBreadcrumbs(`/portfolio/${collectionId}`, collection);
+  const collectionImage = collection.images[0] || 'https://res.cloudinary.com/rvstudioin/image/upload/v1/og-image.jpg';
+  const collectionDescription = `Browse our ${collection.title} photography collection. ${totalImages} professional photographs showcasing our best ${collection.category} work in Rajkot, Gujarat.`;
 
   const goPrevious = () => {
     // Navigate to previous image while staying within bounds
@@ -261,24 +273,34 @@ export default function PortfolioCollection() {
   };
 
   return (
-    <section className="portfolio-collection py-24 bg-obsidian-soft min-h-screen">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10">
-        <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              className="back-arrow"
-              onClick={() => navigate('/portfolio')}
-              aria-label="Back to Portfolio"
-            >
-              ←
-            </button>
-            <div>
-              <div className="section-eyebrow">{categoryLabels[collection.category] || collection.category}</div>
-              <h1 className="section-title">{collection.title}</h1>
+    <>
+      <SEOHead
+        title={collection.title}
+        description={collectionDescription}
+        keywords={`${collection.category} photography, ${collection.title}, portfolio, professional photography, Rajkot photographer`}
+        image={collectionImage}
+        url={`/portfolio/${collectionId}`}
+        type="ImageGallery"
+        breadcrumbs={breadcrumbs}
+      />
+      <section className="portfolio-collection py-24 bg-obsidian-soft min-h-screen">
+        <div className="max-w-6xl mx-auto px-6 sm:px-10">
+          <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="flex items-center gap-4">
+              <button
+                type="button"
+                className="back-arrow"
+                onClick={() => navigate('/portfolio')}
+                aria-label="Back to Portfolio"
+              >
+                ←
+              </button>
+              <div>
+                <div className="section-eyebrow">{categoryLabels[collection.category] || collection.category}</div>
+                <h1 className="section-title">{collection.title}</h1>
+              </div>
             </div>
           </div>
-        </div>
 
         <div className="collection-viewer grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
         
@@ -319,5 +341,6 @@ export default function PortfolioCollection() {
         </div>
       </div>
     </section>
+    </>
   );
 }

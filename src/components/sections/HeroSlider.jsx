@@ -78,8 +78,8 @@ export function HeroSlider() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/portfolio" className="btn-primary">View Portfolio</Link>
-            <Link to="/contact" className="btn-ghost">Book Now <span className="arrow">→</span></Link>
+            <Link to="/portfolio" className="btn-primary" title="View our photography portfolio">View Portfolio</Link>
+            <Link to="/contact" className="btn-ghost" title="Book a photography session with us">Book Now <span className="arrow">→</span></Link>
           </div>
         </div>
  

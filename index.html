@@ -1,13 +1,139 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Character Encoding and Viewport -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RV Studio</title>
+    
+    <!-- Site Title and Description (will be overridden by react-helmet-async) -->
+    <title>RV Studio — Premium Photography Studio Rajkot, Gujarat</title>
+    <meta name="description" content="RV Studio — Premium photography studio in Rajkot, Gujarat. Specializing in weddings, portraits, commercial, events & nature photography." />
+    
+    <!-- Primary Meta Tags -->
+    <meta name="theme-color" content="#0a0e27" />
+    <meta name="msapplication-TileColor" content="#0a0e27" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo-192x192.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.rvstudio.in/" />
+    
+    <!-- Preconnect to External Services -->
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    
+    <!-- Language Alternate Link -->
+    <link rel="alternate" hrefLang="en" href="https://www.rvstudio.in/" />
+    
+    <!-- Google Search Console Verification -->
+    <!-- Replace YOUR_GOOGLE_VERIFICATION_CODE with your actual verification code -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
+    
+    <!-- Microsoft Clarity (optional) -->
+    <!-- Replace YOUR_CLARITY_PROJECT_ID with your Clarity ID -->
+    <!-- <script>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/YOUR_CLARITY_PROJECT_ID";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "YOUR_CLARITY_PROJECT_ID");
+    </script> -->
+    
+    <!-- Open Graph Tags (will be enhanced by react-helmet-async) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RV Studio — Premium Photography Studio Rajkot, Gujarat" />
+    <meta property="og:description" content="Professional photography studio specializing in weddings, portraits, commercial, events and nature photography in Rajkot, Gujarat." />
+    <meta property="og:url" content="https://www.rvstudio.in/" />
+    <meta property="og:site_name" content="RV Studio" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://www.rvstudio.in/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RV Studio — Premium Photography Studio" />
+    <meta name="twitter:description" content="Professional photography studio in Rajkot, Gujarat. Weddings, portraits, commercial, events & nature photography." />
+    <meta name="twitter:image" content="https://www.rvstudio.in/og-image.jpg" />
+    <meta name="twitter:creator" content="@rvstudio" />
+    <meta name="twitter:site" content="@rvstudio" />
+    
+    <!-- Apple Web App Settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="RV Studio" />
+    
+    <!-- Additional Meta Tags for Better SEO -->
+    <meta name="keywords" content="photography, studio, wedding photography, portrait photography, commercial photography, events photography, nature photography, Rajkot, Gujarat" />
+    <meta name="author" content="RV Studio" />
+    <meta name="copyright" content="© 2024 RV Studio. All rights reserved." />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    
+    <!-- Schema.org Structured Data (will be enhanced by react-helmet-async) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RV Studio",
+        "url": "https://www.rvstudio.in",
+        "logo": "https://www.rvstudio.in/logo.png",
+        "description": "Premium photography studio in Rajkot, Gujarat",
+        "sameAs": [
+          "https://www.instagram.com/rvstudio",
+          "https://www.facebook.com/rvstudio"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "telephone": "+91-99047-95771",
+          "email": "rvstudioin@gmail.com"
+        }
+      }
+    </script>
+    
+    <!-- Performance Optimization: Prefetch/Preload Resources -->
+    <link rel="prefetch" href="/portfolio" />
+    <link rel="prefetch" href="/about" />
+    <link rel="prefetch" href="/contact" />
   </head>
   <body>
+    <!-- Main React App Container -->
     <div id="root"></div>
+    
+    <!-- React and Vite App Script -->
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Schema.org BreadcrumbList (will be replaced by react-helmet-async on page load) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.rvstudio.in/"
+          }
+        ]
+      }
+    </script>
+    
+    <!-- No-Script Fallback for Users with JavaScript Disabled -->
+    <noscript>
+      <p>This website requires JavaScript to be enabled for the best experience. Please enable JavaScript in your browser settings.</p>
+    </noscript>
   </body>
 </html>

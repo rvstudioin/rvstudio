@@ -1,0 +1,37 @@
+# robots.txt for RV Studio
+# Allows search engines to crawl all pages
+
+# Allow all bots to crawl the entire site
+User-agent: *
+Allow: /
+Disallow: *.json$
+Disallow: *.map$
+Disallow: /node_modules/
+
+# Crawl delay and request rate
+Crawl-delay: 1
+Request-rate: 1/10s
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.rvstudio.in/sitemap.xml
+
+# For GitHub Pages deployment
+# Note: Adjust base URL if deployed to a subdirectory
+# Sitemap: https://www.rvstudio.in/rvstudio/sitemap.xml
