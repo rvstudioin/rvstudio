@@ -30,8 +30,8 @@ User-agent: MJ12bot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://www.rvstudio.in/sitemap.xml
+Sitemap: https://rvstudioin.github.io/rvstudio/sitemap.xml
 
 # For GitHub Pages deployment
 # Note: Adjust base URL if deployed to a subdirectory
-# Sitemap: https://www.rvstudio.in/rvstudio/sitemap.xml
+# Sitemap: https://rvstudioin.github.io/rvstudio/rvstudio/sitemap.xml

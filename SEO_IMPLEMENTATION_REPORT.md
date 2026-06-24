@@ -140,7 +140,7 @@ src/
 
 1. Go to [Google Search Console](https://search.google.com/search-console/)
 2. Click "Add Property"
-3. Enter your domain: `https://www.rvstudio.in`
+3. Enter your domain: `https://rvstudioin.github.io/rvstudio`
 4. Choose verification method:
    - **Meta tag** (Recommended):
      - Get your verification code from GSC
@@ -154,7 +154,7 @@ src/
    - **File Upload**: Upload verification file to public folder
 
 5. Verify ownership
-6. Submit sitemap: `https://www.rvstudio.in/sitemap.xml`
+6. Submit sitemap: `https://rvstudioin.github.io/rvstudio/sitemap.xml`
 
 ### Step 2: Create OG Images
 Create social media preview images (1200x630px):
@@ -295,10 +295,10 @@ If not already present, create:
 ### Social Share URLs:
 ```javascript
 // Share your portfolio
-Facebook: https://www.facebook.com/sharer/sharer.php?u=https://www.rvstudio.in
-Twitter: https://twitter.com/intent/tweet?url=https://www.rvstudio.in&text=RV%20Studio
-LinkedIn: https://www.linkedin.com/sharing/share-offsite/?url=https://www.rvstudio.in
-Pinterest: https://pinterest.com/pin/create/button/?url=https://www.rvstudio.in
+Facebook: https://www.facebook.com/sharer/sharer.php?u=https://rvstudioin.github.io/rvstudio
+Twitter: https://twitter.com/intent/tweet?url=https://rvstudioin.github.io/rvstudio&text=RV%20Studio
+LinkedIn: https://www.linkedin.com/sharing/share-offsite/?url=https://rvstudioin.github.io/rvstudio
+Pinterest: https://pinterest.com/pin/create/button/?url=https://rvstudioin.github.io/rvstudio
 ```
 
 ---

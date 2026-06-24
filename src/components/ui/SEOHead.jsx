@@ -21,7 +21,7 @@ export function SEOHead({
 }) {
   const siteName = 'RV Studio';
   const fullTitle = title ? `${title} | ${siteName}` : `${siteName} — Premium Photography Studio Rajkot, Gujarat`;
-  const baseUrl = 'https://www.rvstudio.in';
+  const baseUrl = 'https://rvstudioin.github.io/rvstudio';
   const canonicalUrl = url ? `${baseUrl}${url}` : baseUrl;
   
   // Default OG image if not provided
@@ -55,8 +55,9 @@ export function SEOHead({
       "name": "Rajkot"
     },
     "sameAs": [
-      "https://www.instagram.com/rvstudio",
-      "https://www.facebook.com/rvstudio"
+      "https://www.instagram.com/clickerspark/",
+      "https://www.facebook.com/ravi.lakhatariya.79/",
+      "https://www.youtube.com/@ravilakhtariya"
     ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -181,8 +182,9 @@ export function SEOHead({
         "logo": `${baseUrl}/logo.png`,
         "description": metaDescription,
         "sameAs": [
-          "https://www.instagram.com/rvstudio",
-          "https://www.facebook.com/rvstudio"
+          "https://www.instagram.com/clickerspark/",
+          "https://www.facebook.com/ravi.lakhatariya.79/",
+          "https://www.youtube.com/@ravilakhtariya"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
@@ -212,8 +214,9 @@ export function SEOHead({
         "url": baseUrl,
         "priceRange": "₹₹₹",
         "sameAs": [
-          "https://www.instagram.com/rvstudio",
-          "https://www.facebook.com/rvstudio"
+          "https://www.instagram.com/clickerspark/",
+          "https://www.facebook.com/ravi.lakhatariya.79/",
+          "https://www.youtube.com/@ravilakhtariya"
         ]
       })}</script>
     </Helmet>

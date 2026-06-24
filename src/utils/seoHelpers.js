@@ -86,12 +86,13 @@ export function generateKeywords(category) {
 export function getSiteMetadata() {
   return {
     siteName: 'RV Studio',
-    baseUrl: 'https://www.rvstudio.in',
+    baseUrl: 'https://rvstudioin.github.io/rvstudio',
     email: 'rvstudioin@gmail.com',
     phone: '+91-99047-95771',
     address: 'Rajkot, Gujarat, India',
-    instagram: 'https://www.instagram.com/rvstudio',
-    facebook: 'https://www.facebook.com/rvstudio',
+    instagram: 'https://www.instagram.com/clickerspark/',
+    facebook: 'https://www.facebook.com/ravi.lakhatariya.79/',
+    youtube: 'https://www.youtube.com/@ravilakhtariya',
     defaultDescription: 'RV Studio — Premium photography studio in Rajkot, Gujarat. Specializing in weddings, portraits, commercial, events & nature photography.',
     twitter: '@rvstudio'
   };
@@ -117,7 +118,7 @@ export function generateHeroSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     'name': 'RV Studio',
-    'url': 'https://www.rvstudio.in',
+    'url': 'https://rvstudioin.github.io/rvstudio',
     'description': 'Premium photography studio specializing in weddings, portraits, commercial, events and nature photography',
     'areaServed': 'Rajkot, Gujarat, India',
     'telephone': '+91-99047-95771'
@@ -132,7 +133,7 @@ export function generateHeroSchema() {
 export function generateBreadcrumbSchema(breadcrumbs) {
   if (!breadcrumbs || breadcrumbs.length === 0) return null;
 
-  const baseUrl = 'https://www.rvstudio.in';
+  const baseUrl = 'https://rvstudioin.github.io/rvstudio';
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

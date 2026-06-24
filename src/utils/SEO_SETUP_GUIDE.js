@@ -60,8 +60,8 @@
  * - Fast Load Times: Lazy loading and image optimization
  * - HTTPS/Security: Essential for SEO ranking
  * 
- * Sitemap URL: https://www.rvstudio.in/sitemap.xml
- * Robots.txt URL: https://www.rvstudio.in/robots.txt
+ * Sitemap URL: https://rvstudioin.github.io/rvstudio/sitemap.xml
+ * Robots.txt URL: https://rvstudioin.github.io/rvstudio/robots.txt
  */
 
 // ═══════════════════════════════════════════════════════════
@@ -155,13 +155,13 @@
  * Required Setup Steps:
  * 
  * 1. Go to Google Search Console: https://search.google.com/search-console/
- * 2. Add Property: https://www.rvstudio.in
+ * 2. Add Property: https://rvstudioin.github.io/rvstudio
  * 3. Verify Domain Ownership:
  *    - Option A: Meta Tag (Already in index.html)
  *      Replace "YOUR_GOOGLE_VERIFICATION_CODE_HERE" with your code
  *    - Option B: DNS Record
  *    - Option C: File Upload
- * 4. Submit Sitemap: https://www.rvstudio.in/sitemap.xml
+ * 4. Submit Sitemap: https://rvstudioin.github.io/rvstudio/sitemap.xml
  * 5. Monitor:
  *    - Coverage reports
  *    - Performance metrics
@@ -201,7 +201,7 @@
 /**
  * Current Configuration:
  * - Base URL: /rvstudio/ (in vite.config.js)
- * - Custom Domain: https://www.rvstudio.in
+ * - Custom Domain: https://rvstudioin.github.io/rvstudio
  * - Repository: GitHub Pages compatible
  * 
  * SEO Notes for GitHub Pages:
@@ -359,15 +359,15 @@
 
 export const SEO_CONFIG = {
   siteName: 'RV Studio',
-  baseUrl: 'https://www.rvstudio.in',
+  baseUrl: 'https://rvstudioin.github.io/rvstudio',
   email: 'rvstudioin@gmail.com',
   phone: '+91-99047-95771',
   address: 'Rajkot, Gujarat, India',
   social: {
-    instagram: 'https://www.instagram.com/rvstudio',
-    facebook: 'https://www.facebook.com/rvstudio',
+    instagram: 'https://www.instagram.com/clickerspark/',
+    facebook: 'https://www.facebook.com/ravi.lakhatariya.79/',
     twitter: '@rvstudio'
   },
-  sitemapUrl: 'https://www.rvstudio.in/sitemap.xml',
-  robotsUrl: 'https://www.rvstudio.in/robots.txt'
+  sitemapUrl: 'https://rvstudioin.github.io/rvstudio/sitemap.xml',
+  robotsUrl: 'https://rvstudioin.github.io/rvstudio/robots.txt'
 };

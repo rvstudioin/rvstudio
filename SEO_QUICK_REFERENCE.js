@@ -153,8 +153,7 @@ File: public/sitemap.xml
 Add before closing </urlset>:
 
 <url>
-  <loc>https://www.rvstudio.in/portfolio/collection-id</loc>
-  <lastmod>2024-06-24</lastmod>
+    <loc>https://rvstudioin.github.io/rvstudio/portfolio/collection-id</loc>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   <image:image>
@@ -252,9 +251,9 @@ All automatically added via SEOHead component.
 Step-by-step:
 1. Go to https://search.google.com/search-console/
 2. Click "Add Property"
-3. Enter: https://www.rvstudio.in
+3. Enter: https://rvstudioin.github.io/rvstudio
 4. Verify ownership (meta tag, DNS, or file)
-5. Submit sitemap: https://www.rvstudio.in/sitemap.xml
+5. Submit sitemap: https://rvstudioin.github.io/rvstudio/sitemap.xml
 6. Wait for indexing (24-72 hours)
 
 After verification:

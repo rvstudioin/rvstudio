@@ -137,7 +137,7 @@ Use this checklist to verify all SEO optimizations are correctly implemented.
 ### Requirement 3: Canonical URLs ✅
 - [x] Set in SEOHead component
 - [x] Unique per page
-- [x] Points to main domain (www.rvstudio.in)
+- [x] Points to main domain (https://rvstudioin.github.io/rvstudio)
 - [x] Prevents duplicate content issues
 
 ### Requirement 4: Open Graph Tags ✅
