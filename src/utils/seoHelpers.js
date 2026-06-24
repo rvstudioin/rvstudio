@@ -93,6 +93,7 @@ export function getSiteMetadata() {
     instagram: 'https://www.instagram.com/clickerspark/',
     facebook: 'https://www.facebook.com/ravi.lakhatariya.79/',
     youtube: 'https://www.youtube.com/@ravilakhtariya',
+    shutterstock: 'https://www.shutterstock.com/g/Ravilakhtariya',
     defaultDescription: 'RV Studio — Premium photography studio in Rajkot, Gujarat. Specializing in weddings, portraits, commercial, events & nature photography.',
     twitter: '@rvstudio'
   };

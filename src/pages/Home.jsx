@@ -2,10 +2,12 @@
 import { SEOHead }       from '../components/ui/SEOHead';
 import { HeroSlider }    from '../components/sections/HeroSlider';
 import { RecentWorks }   from '../components/sections/RecentWorks';
+import { VideosSection } from '../components/sections/VideosSection';
 // import { PortfolioGrid } from '../components/sections/PortfolioGrid';
 import { AboutSection }  from '../components/sections/AboutSection';
 import { ServicesSection } from '../components/sections/ServicesSection';
 import { ContactSection } from '../components/sections/ContactSection';
+import videos from '../data/videos.json';
  
 export default function Home() {
   // Home page composes several landing sections and sets SEO metadata
@@ -21,6 +23,13 @@ export default function Home() {
       <RecentWorks />
       <AboutSection />
       <ServicesSection />
+      <VideosSection
+        videos={videos.slice(0, 3)}
+        title="Studio Films & Stories"
+        subtitle="Featured RV Studio videos from our latest photography projects and Rajkot stories."
+        showViewAll
+        viewAllLink="/videos"
+      />
       <ContactSection />
     </>
   );

@@ -12,6 +12,7 @@ import { setNavScrolled, toggleMobileMenu } from '../../features/ui/uiSlice';
 const NAV_LINKS = [
   { label: 'Home',      path: '/' },
   { label: 'Portfolio', path: '/portfolio' },
+  { label: 'Videos',    path: '/videos' },
   { label: 'About',     path: '/about' },
   { label: 'Contact',   path: '/contact' },
 ];
@@ -46,7 +47,7 @@ export default function Navbar() {
     if (mobileMenuOpen) {
       dispatch(toggleMobileMenu());
     }
-  }, [location.pathname, dispatch]);
+  }, [location.pathname, mobileMenuOpen, dispatch]);
  
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between

@@ -14,6 +14,7 @@ import { WhatsAppButton } from './components/ui/WhatsAppButton';
 import  Home     from './pages/Home';
 import  Portfolio  from './pages/Portfolio';
 import  PortfolioCollection from './pages/PortfolioCollection';
+import  Videos from './pages/Videos';
 import  Contact  from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 // import './styles/globals.css';
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="/"          element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/portfolio/:collectionId" element={<PortfolioCollection />} />
+              <Route path="/videos" element={<Videos />} />
               <Route path="/about"     element={<AboutUs />} />
               <Route path="/contact"   element={<Contact />} />
             </Routes>
