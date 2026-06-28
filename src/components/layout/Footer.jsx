@@ -1,3 +1,8 @@
+import content from '../../data/content.json';
+import { t } from '../../utils/i18n';
+
+const { footer } = content;
+
 // src/components/layout/Footer.jsx
 // Footer component with navigation links and social contacts.
 export function Footer() {
@@ -7,19 +12,16 @@ export function Footer() {
         RV <span>Studio</span>
       </div>
       <div className="footer-links">
-        <a href="#home">Home</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#">Privacy</a>
+        {footer.links.map((link) => (
+          <a key={link.href} href={link.href}>{link.label}</a>
+        ))}
       </div>
       <div className="social-links">
-        <a className="social-link" href="https://www.instagram.com/clickerspark/" title="Instagram">in</a>
-        <a className="social-link" href="https://www.facebook.com/ravi.lakhatariya.79/" title="Facebook">fb</a>
-        <a className="social-link" href="https://www.youtube.com/@ravilakhtariya" title="YouTube">▶</a>
-        <a className="social-link" href="https://www.shutterstock.com/g/Ravilakhtariya" title="YouTube">S</a>
+        {footer.socialLinks.map((social) => (
+          <a key={social.href} className="social-link" href={social.href} title={social.title}>{social.label}</a>
+        ))}
       </div>
-      <div className="footer-copy">© 2024 RV Studio. All rights reserved.</div>
+      <div className="footer-copy">{t('footer.copyright')}</div>
     </footer>
   );
 }

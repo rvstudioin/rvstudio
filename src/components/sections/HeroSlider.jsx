@@ -7,14 +7,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { CloudinaryImage } from '../ui/CloudinaryImage';
 import { Link } from 'react-router-dom';
+import content from '../../data/content.json';
+import { t } from '../../utils/i18n';
  
-// Cloudinary public IDs for hero slides — replace with your actual IDs
-const SLIDES = [
-   { id: 1, publicId: 'Prewedding/hetal-jasmin',    title: 'Capturing Moments',   sub: 'Wedding Photography',    eyebrow: 'Weddings' },
-   { id: 2, publicId: 'Carousel/ycmoxz1fcrfgyih9hnd2',   title: 'Revealing Character', sub: 'Portrait Sessions',      eyebrow: 'Portraits' },
-  { id: 3, publicId: 'Carousel/b2ct3p2aacccz0lhpyxc', title: 'Building Brands',     sub: 'Commercial Photography', eyebrow: 'Commercial' },
-   { id: 4, publicId: 'Nature/weqq4psbyaqrtpkocv7r',     title: 'Finding the Wild',    sub: 'Nature & Landscape',     eyebrow: 'Nature' },
-];
+const { heroSlides: SLIDES } = content;
  
 export function HeroSlider() {
   // current slide index and pause state for hover interaction
@@ -78,8 +74,8 @@ export function HeroSlider() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/portfolio" className="btn-primary" title="View our photography portfolio">View Portfolio</Link>
-            <Link to="/contact" className="btn-ghost" title="Book a photography session with us">Book Now <span className="arrow">→</span></Link>
+            <Link to="/portfolio" className="btn-primary" title={t('buttons.viewPortfolio')}>{t('buttons.viewPortfolio')}</Link>
+            <Link to="/contact" className="btn-ghost" title={t('buttons.bookNow')}>{t('buttons.bookNow')} <span className="arrow">→</span></Link>
           </div>
         </div>
  

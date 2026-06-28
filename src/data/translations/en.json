@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "bookSession": "Book a Session",
+    "toggleMenu": "Toggle menu",
+    "closeMenu": "Close menu"
+  },
+  "buttons": {
+    "viewPortfolio": "View Portfolio",
+    "bookNow": "Book Now",
+    "viewAllWork": "View All Work",
+    "viewAllVideos": "View All Videos",
+    "watchOnYouTube": "Watch on YouTube"
+  },
+  "videos": {
+    "videoLabel": "YouTube Video",
+    "shortLabel": "YouTube Short"
+  },
+  "contact": {
+    "sending": "Sending...",
+    "sendEnquiry": "Send Enquiry →",
+    "dismiss": "Dismiss",
+    "successTitle": "Email draft opened successfully!",
+    "successBody": "Your message has been prepared in your email client. We'll get back to you shortly."
+  },
+  "validation": {
+    "nameRequired": "Full name is required.",
+    "emailRequired": "Email address is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "phoneRequired": "Phone number is required.",
+    "serviceRequired": "Please select a service."
+  },
+  "footer": {
+    "copyright": "© 2024 RV Studio. All rights reserved."
+  }
+}

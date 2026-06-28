@@ -1,10 +1,14 @@
 import { useState } from "react";
+import content from '../../data/content.json';
+import { t } from '../../utils/i18n';
+
+const { contactSection } = content;
 
 // src/components/sections/ContactSection.jsx
 // Contact section with a form, validation, mailto integration, and success message.
 export function ContactSection() {
   //  const WHATSAPP_NUMBER = "919904795771"; // E.164 format without '+'
-  const RECIPIENT_EMAIL = "rvstudioin@gmail.com";
+  const RECIPIENT_EMAIL = contactSection.recipientEmail;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,12 +33,12 @@ export function ContactSection() {
     function validate() {
     const newErrors = {};
     // Basic field validation: required fields and simple email pattern
-    if (!formData.name.trim()) newErrors.name = "Full name is required.";
-    if (!formData.email.trim()) newErrors.email = "Email address is required.";
+    if (!formData.name.trim()) newErrors.name = t('validation.nameRequired');
+    if (!formData.email.trim()) newErrors.email = t('validation.emailRequired');
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
-      newErrors.email = "Enter a valid email address.";
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
-    if (!formData.service) newErrors.service = "Please select a service.";
+      newErrors.email = t('validation.emailInvalid');
+    if (!formData.phone.trim()) newErrors.phone = t('validation.phoneRequired');
+    if (!formData.service) newErrors.service = t('validation.serviceRequired');
     return newErrors;
   }
  
@@ -97,24 +101,22 @@ export function ContactSection() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10">
         <div className="contact-inner">
           <div className="contact-info">
-            <div className="section-eyebrow">Get in Touch</div>
-            <h2 className="section-title">Let's Create<br /><em>Together</em></h2>
-            <p className="text-gray-light leading-relaxed mb-8">
-              Every great photograph begins with a conversation. Tell us about your vision and well shape it into something lasting.
+              <div className="section-eyebrow">{contactSection.eyebrow}</div>
+              <h2 className="section-title">
+                {contactSection.headingLine1}
+                <br />
+                <em>{contactSection.headingEm}</em>
+              </h2>
+              <p className="text-gray-light leading-relaxed mb-8">
+                {contactSection.description}
             </p>
 
-            <div className="contact-detail">
-              <div className="contact-detail-icon">✉</div>
-              <span>rvstudioin@gmail.com</span>
-            </div>
-            <div className="contact-detail">
-              <div className="contact-detail-icon">☎</div>
-              <span>+91 99047 95771</span>
-            </div>
-            <div className="contact-detail">
-              <div className="contact-detail-icon">⊙</div>
-              <span>Rajkot, Gujarat, India</span>
-            </div>
+            {contactSection.details.map((detail, index) => (
+              <div key={index} className="contact-detail">
+                <div className="contact-detail-icon">{detail.icon}</div>
+                <span>{detail.text}</span>
+              </div>
+            ))}
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
@@ -138,15 +140,14 @@ export function ContactSection() {
               >
                 <span style={{ fontSize: "1.2rem", flexShrink: 0 }}>✅</span>
                 <div>
-                  <strong>Email draft opened successfully!</strong>
+                  <strong>{t('contact.successTitle')}</strong>
                   <br />
-                  Your message has been prepared in your email client. We'll get back to
-                  you shortly.
+                  {t('contact.successBody')}
                 </div>
                 <button
                   type="button"
                   onClick={() => setSubmitted(false)}
-                  aria-label="Dismiss"
+                  aria-label={t('contact.dismiss')}
                   style={{
                     marginLeft: "auto",
                     background: "none",
@@ -164,42 +165,39 @@ export function ContactSection() {
             )}
             <div className="form-row">
               <label className="form-group">
-                <span className="form-label">Full Name</span>
+                <span className="form-label">{contactSection.form.name}</span>
                 <input className="form-input" type="text" placeholder="Your name" name="name" value={formData.name} onChange={handleChange} />
                  {err.name && <FieldError msg={err.name} />}
               </label>
               <label className="form-group">
-                <span className="form-label">Email Address</span>
+                <span className="form-label">{contactSection.form.email}</span>
                 <input className="form-input" type="email" placeholder="your@email.com" name="email" value={formData.email} onChange={handleChange} />
                  {err.email && <FieldError msg={err.email} />}
               </label>
             </div>
             <div className="form-row">
               <label className="form-group">
-                <span className="form-label">Phone Number</span>
+                <span className="form-label">{contactSection.form.phone}</span>
                 <input className="form-input" type="tel" placeholder="+91 00000 00000" name="phone" value={formData.phone} onChange={handleChange} />
                  {err.phone && <FieldError msg={err.phone} />}
               </label>
               <label className="form-group">
-                <span className="form-label">Service Required</span>
+                <span className="form-label">{contactSection.form.service}</span>
                 <select className="form-select form-input" name="service" value={formData.service} onChange={handleChange}>
-                  <option value="">Select a service</option>
-                  <option>Wedding Photography</option>
-                  <option>Portrait Session</option>
-                  <option>Commercial Shoot</option>
-                  <option>Event Coverage</option>
-                  <option>Fashion & Editorial</option>
-                  <option>Nature & Travel</option>
+                  <option value="">{contactSection.form.servicePlaceholder}</option>
+                  {contactSection.form.options.map((option) => (
+                    <option key={option} value={option}>{option}</option>
+                  ))}
                 </select>
                 {err.service && <FieldError msg={err.service} />}
               </label>
             </div>
             <label className="form-group">
-              <span className="form-label">Event Date</span>
+              <span className="form-label">{contactSection.form.eventDate}</span>
               <input className="form-input" type="date" name="eventDate" value={formData.eventDate} onChange={handleChange} />
             </label>
             <label className="form-group">
-              <span className="form-label">Tell Us About Your Project</span>
+              <span className="form-label">{contactSection.form.projectDetails}</span>
               <textarea className="form-textarea" placeholder="Describe your vision, location, style preferences, and any special requirements..." name="projectDetails" value={formData.projectDetails} onChange={handleChange}></textarea>
             </label>
             <button
@@ -207,7 +205,7 @@ export function ContactSection() {
               type="submit"
               disabled={loading}
             >
-              {loading ? "Sending..." : "Send Enquiry →"}
+              {loading ? t('contact.sending') : t('contact.sendEnquiry')}
             </button>
           </form>
         </div>

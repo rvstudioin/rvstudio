@@ -1,38 +1,8 @@
 import { Link } from "react-router-dom";
 import { CloudinaryImage } from "../ui/CloudinaryImage";
+import content from '../../data/content.json';
 
-const works = [
-  {
-    id: "Preweddings/disha-dishant",
-    label: "Pre-Wedding",
-    title: "Hetal & Jasmin",
-    style: "photo-w",
-  },
-  {
-    id: "Portrait/m49tg9kkljfg28tnzcl5",
-    label: "Portrait",
-    title: "Studio Series",
-    style: "photo-p",
-  },
-  {
-    id: "Product/emfbz49x5hqvbajxuaob",
-    label: "Commercial",
-    title: "Brand Identity",
-    style: "photo-c",
-  },
-  {
-    id: "Place/z7jxe2ytcp9kso3oeo1x",
-    label: "Events",
-    title: "Corporate Gala",
-    style: "photo-e",
-  },
-  {
-    id: "Place/yr4p0rnvm6nmpkxd5ifw",
-    label: "Nature",
-    title: "Gujarat Landscapes",
-    style: "photo-n",
-  },
-];
+const { recentWorks, recentWorksSection } = content;
 
 // src/components/sections/RecentWorks.jsx
 // Section that displays a selection of recent works with image cards.
@@ -42,18 +12,19 @@ export function RecentWorks() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10">
         <div className="recent-header">
           <div>
-            <div className="section-eyebrow">Recent Works</div>
+            <div className="section-eyebrow">{recentWorksSection.eyebrow}</div>
             <h2 className="section-title">
-              Selected <em>Stories</em>
+              {recentWorksSection.titlePrefix}
+              <em>{recentWorksSection.titleEm}</em>
             </h2>
           </div>
-          <Link to="/portfolio" className="link-underline">
-            View All Work
+          <Link to={recentWorksSection.viewAllLink} className="link-underline">
+            {recentWorksSection.viewAllLabel}
           </Link>
         </div>
 
         <div className="works-grid">
-          {works.map((work, index) => (
+          {recentWorks.map((work, index) => (
             <article
               key={work.id}
               className={`work-card ${index === 0 ? "first-card" : ""}`}>

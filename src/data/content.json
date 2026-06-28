@@ -1,0 +1,187 @@
+{
+  "navLinks": [
+    { "label": "Home", "path": "/" },
+    { "label": "Portfolio", "path": "/portfolio" },
+    { "label": "Videos", "path": "/videos" },
+    { "label": "About", "path": "/about" },
+    { "label": "Contact", "path": "/contact" }
+  ],
+  "heroSlides": [
+    {
+      "id": 1,
+      "publicId": "Prewedding/hetal-jasmin",
+      "title": "Capturing Moments",
+      "sub": "Wedding Photography",
+      "eyebrow": "Weddings"
+    },
+    {
+      "id": 2,
+      "publicId": "Carousel/ycmoxz1fcrfgyih9hnd2",
+      "title": "Revealing Character",
+      "sub": "Portrait Sessions",
+      "eyebrow": "Portraits"
+    },
+    {
+      "id": 3,
+      "publicId": "Carousel/b2ct3p2aacccz0lhpyxc",
+      "title": "Building Brands",
+      "sub": "Commercial Photography",
+      "eyebrow": "Commercial"
+    },
+    {
+      "id": 4,
+      "publicId": "Nature/weqq4psbyaqrtpkocv7r",
+      "title": "Finding the Wild",
+      "sub": "Nature & Landscape",
+      "eyebrow": "Nature"
+    }
+  ],
+  "recentWorks": [
+    {
+      "id": "Preweddings/disha-dishant",
+      "label": "Pre-Wedding",
+      "title": "Disha & Dishant",
+      "style": "photo-w"
+    },
+    {
+      "id": "Portrait/m49tg9kkljfg28tnzcl5",
+      "label": "Portrait",
+      "title": "Studio Series",
+      "style": "photo-p"
+    },
+    {
+      "id": "Product/emfbz49x5hqvbajxuaob",
+      "label": "Commercial",
+      "title": "Brand Identity",
+      "style": "photo-c"
+    },
+    {
+      "id": "Place/z7jxe2ytcp9kso3oeo1x",
+      "label": "Events",
+      "title": "Corporate Gala",
+      "style": "photo-e"
+    },
+    {
+      "id": "Place/yr4p0rnvm6nmpkxd5ifw",
+      "label": "Nature",
+      "title": "Gujarat Landscapes",
+      "style": "photo-n"
+    }
+  ],
+  "services": [
+    {
+      "id": "wedding",
+      "title": "Pre-Wedding Photography",
+      "description": "Full-day coverage from Mehendi to Reception. Candid, traditional, and editorial styles."
+    },
+    {
+      "id": "portrait",
+      "title": "Portrait Sessions",
+      "description": "Individual, couple, and family portraits with studio and outdoor options."
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Shoots",
+      "description": "Product photography, brand visuals, and social media content for businesses."
+    },
+    {
+      "id": "events",
+      "title": "Event Coverage",
+      "description": "Corporate events, conferences, launches, and private parties captured professionally."
+    },
+    {
+      "id": "fashion",
+      "title": "Fashion & Editorial",
+      "description": "Lookbooks, catalogue shoots, and editorial campaigns with stylist collaboration."
+    },
+    {
+      "id": "nature",
+      "title": "Nature & Travel",
+      "description": "Landscape, wildlife, and documentary photography with cinematic framing."
+    }
+  ],
+  "recentWorksSection": {
+    "eyebrow": "Recent Works",
+    "titlePrefix": "Selected ",
+    "titleEm": "Stories",
+    "viewAllLabel": "View All Work",
+    "viewAllLink": "/portfolio"
+  },
+  "servicesSection": {
+    "eyebrow": "What We Offer",
+    "titlePrefix": "Our ",
+    "titleEm": "Services"
+  },
+  "aboutSection": {
+    "eyebrow": "About Us",
+    "headingLine1": "We See the",
+    "headingEm": "Beauty",
+    "headingLine2": "in Every Moment",
+    "paragraphs": [
+      "RV Studio was founded with one belief: photography is not about equipment — it's about understanding light, emotion, and the unrepeatable instant between moments.",
+      "Based in Rajkot, Gujarat, we work across weddings, corporate events, portraits, fashion, and commercial shoots throughout India. Our team brings a cinematic approach to every session — quiet, unhurried, and entirely focused on you."
+    ],
+    "stats": [
+      { "value": "6+", "label": "Years of Work" },
+      { "value": "7+", "label": "Sessions Shot" },
+      { "value": "3+", "label": "Awards Won" }
+    ],
+    "ctaLabel": "Get in Touch",
+    "ctaLink": "/contact"
+  },
+  "videosSection": {
+    "eyebrow": "Videos",
+    "defaultTitle": "Studio Films & Stories",
+    "defaultSubtitle": "Discover our latest photography and travel videos from RV Studio.",
+    "viewAllLabel": "View All Videos"
+  },
+  "contactSection": {
+    "eyebrow": "Get in Touch",
+    "headingLine1": "Let's Create",
+    "headingEm": "Together",
+    "description": "Every great photograph begins with a conversation. Tell us about your vision and we'll shape it into something lasting.",
+    "details": [
+      { "icon": "✉", "text": "rvstudioin@gmail.com" },
+      { "icon": "☎", "text": "+91 99047 95771" },
+      { "icon": "⊙", "text": "Rajkot, Gujarat, India" }
+    ],
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "service": "Service Required",
+      "eventDate": "Event Date",
+      "projectDetails": "Tell Us About Your Project",
+      "servicePlaceholder": "Select a service",
+      "options": [
+        "Wedding Photography",
+        "Portrait Session",
+        "Commercial Shoot",
+        "Event Coverage",
+        "Fashion & Editorial",
+        "Nature & Travel"
+      ],
+      "button": "Send Enquiry →",
+      "sending": "Sending..."
+    },
+    "successTitle": "Email draft opened successfully!",
+    "successBody": "Your message has been prepared in your email client. We'll get back to you shortly.",
+    "recipientEmail": "rvstudioin@gmail.com"
+  },
+  "footer": {
+    "links": [
+      { "label": "Home", "href": "#home" },
+      { "label": "Portfolio", "href": "#portfolio" },
+      { "label": "About", "href": "#about" },
+      { "label": "Contact", "href": "#contact" },
+      { "label": "Privacy", "href": "#" }
+    ],
+    "socialLinks": [
+      { "label": "in", "href": "https://www.instagram.com/clickerspark/", "title": "Instagram" },
+      { "label": "fb", "href": "https://www.facebook.com/ravi.lakhatariya.79/", "title": "Facebook" },
+      { "label": "▶", "href": "https://www.youtube.com/@ravilakhtariya", "title": "YouTube" },
+      { "label": "S", "href": "https://www.shutterstock.com/g/Ravilakhtariya", "title": "Shutterstock" }
+    ],
+    "copyright": "© 2024 RV Studio. All rights reserved."
+  }
+}

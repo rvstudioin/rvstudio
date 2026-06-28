@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import content from '../../data/content.json';
+import { t } from '../../utils/i18n';
+
+const { videosSection } = content;
 
 export function VideosSection({
   videos,
-  title = 'Studio Films & Stories',
-  subtitle = 'Discover our latest photography and travel videos from RV Studio.',
+  title = videosSection.defaultTitle,
+  subtitle = videosSection.defaultSubtitle,
   showViewAll = false,
   viewAllLink = '/videos',
 }) {
@@ -12,13 +16,13 @@ export function VideosSection({
       <div className="max-w-6xl mx-auto px-6 sm:px-10">
         <div className="videos-header">
           <div>
-            <div className="section-eyebrow">Videos</div>
+            <div className="section-eyebrow">{videosSection.eyebrow}</div>
             <h2 className="section-title">{title}</h2>
             <p className="videos-intro">{subtitle}</p>
           </div>
           {showViewAll && (
             <Link to={viewAllLink} className="btn-primary">
-              View All Videos
+              {t('buttons.viewAllVideos')}
             </Link>
           )}
         </div>
@@ -35,7 +39,7 @@ export function VideosSection({
                 <p className="video-card-desc">{video.description}</p>
                 <div className="video-meta">
                   <span>{video.publishedAt}</span>
-                  <span>{video.youtubeUrl.includes('shorts') ? 'YouTube Short' : 'YouTube Video'}</span>
+                  <span>{video.youtubeUrl.includes('shorts') ? t('videos.shortLabel') : t('videos.videoLabel')}</span>
                 </div>
                 <div className="video-actions">
                   <a
@@ -44,7 +48,7 @@ export function VideosSection({
                     rel="noreferrer"
                     className="btn-ghost"
                   >
-                    Watch on YouTube
+                    {t('buttons.watchOnYouTube')}
                   </a>
                 </div>
               </div>

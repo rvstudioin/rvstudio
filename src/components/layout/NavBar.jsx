@@ -8,14 +8,10 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setNavScrolled, toggleMobileMenu } from '../../features/ui/uiSlice';
+import content from '../../data/content.json';
+import { t } from '../../utils/i18n';
  
-const NAV_LINKS = [
-  { label: 'Home',      path: '/' },
-  { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Videos',    path: '/videos' },
-  { label: 'About',     path: '/about' },
-  { label: 'Contact',   path: '/contact' },
-];
+const { navLinks } = content;
  
 export default function Navbar() {
   // Responsive navigation bar with desktop links and mobile slide-in menu
@@ -60,7 +56,7 @@ export default function Navbar() {
       </Link>
  
       <ul className="hidden lg:flex gap-10 list-none">
-        {NAV_LINKS.map(({ label, path }) => (
+        {navLinks.map(({ label, path }) => (
           <li key={path}>
             <Link
               to={path}
@@ -77,14 +73,15 @@ export default function Navbar() {
         to="/contact"
         className="hidden lg:block text-label uppercase tracking-widest text-gold
           border border-gold-dim px-5 py-2 hover:bg-gold hover:text-obsidian transition-all duration-200"
+        aria-label={t('nav.bookSession')}
       >
-        Book a Session
+        {t('nav.bookSession')}
       </Link>
  
       <button
         className="lg:hidden text-cream"
         onClick={() => dispatch(toggleMobileMenu())}
-        aria-label="Toggle menu"
+        aria-label={t('nav.toggleMenu')}
       >
         ☰
       </button>
@@ -101,12 +98,12 @@ export default function Navbar() {
           <button
             className="self-end text-4xl text-cream hover:text-gold transition-colors duration-200"
             onClick={() => dispatch(toggleMobileMenu())}
-            aria-label="Close menu"
+            aria-label={t('nav.closeMenu')}
           >
             ✕
           </button>
           <ul className="flex flex-col gap-6 pt-4 list-none">
-            {NAV_LINKS.map(({ label, path }) => (
+            {navLinks.map(({ label, path }) => (
               <li key={path}>
                 <Link
                   to={path}
@@ -124,7 +121,7 @@ export default function Navbar() {
               className="block text-center py-3 px-4 uppercase tracking-[0.25em] font-semibold text-obsidian bg-gold hover:bg-gold/90 transition-colors duration-200 rounded"
               onClick={() => dispatch(toggleMobileMenu())}
             >
-              Book a Session
+              {t('nav.bookSession')}
             </Link>
           </div>
         </div>
