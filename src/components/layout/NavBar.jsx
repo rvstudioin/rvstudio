@@ -38,12 +38,15 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  // Auto-close the mobile menu whenever the route changes.
+  // Intentionally omit `mobileMenuOpen` from deps so opening the menu doesn't
+  // trigger this effect immediately after a toggle. Suppress exhaustive-deps.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    // Auto-close the mobile menu whenever the route changes
     if (mobileMenuOpen) {
       dispatch(toggleMobileMenu());
     }
-  }, [location.pathname, mobileMenuOpen, dispatch]);
+  }, [location.pathname, dispatch]);
  
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between
